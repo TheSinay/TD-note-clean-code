@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "vitetest"
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/TheSinay/TD-note-clean-code#readme",
   "dependencies": {
-    "vite": "^7.1.12"
+    "vite": "^7.1.12",
+    "vitest": "^4.0.5"
   }
 }
