@@ -23,3 +23,14 @@ describe("isBrelan",()=>{
         expect(result).toBe(true);
     });
 });
+
+describe("iscarre",()=>{
+    it("should return true for [4,4,4,4,2]",()=>{
+        const result = isBrelan([4,4,4,4,2]);
+        expect(result).toBe(true);
+    });
+    it("should return false for [1,1,2,2,3]",()=>{
+        const result = isBrelan([1,1,2,2,3]);
+        expect(result).toBe(false);
+    });
+});
