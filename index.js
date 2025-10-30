@@ -70,7 +70,7 @@ export const multithrowDices = (multithrowDices) => {
       return 50;
     }
   }
-  return;
+ 
 }
 
 
