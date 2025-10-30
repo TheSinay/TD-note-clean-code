@@ -58,5 +58,19 @@ export const isFull = (dices) => {
   return !!pair && pair !== 0;
 };
 
+export const chance = (dices) => {
+  if (!Array.isArray(dices) || dices.length !== 5) return 0;
+  return dices.reduce((sum, val) => sum + val, 0);
+}
+
+
+export const multithrowDices = (multithrowDices) => {
+  for (let i = 0; i < multithrowDices.length; i++) {
+    if (isYams(multithrowDices[i])) {
+      return 50;
+    }
+  }
+  return;
+}
 
 

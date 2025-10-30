@@ -1,5 +1,5 @@
 import { describe,it,expect } from "vitest";
-import { isBrelan, isCarre, isPair, isYams,isGrandeSuite,cheackDicesResult,isFull } from "./index.js";
+import { isBrelan, isCarre, isPair, chance,multithrowDices,isYams,isGrandeSuite,cheackDicesResult,isFull } from "./index.js";
 
 describe("isBrelan",()=>{
     it("should return true for [2,2,2,4,5]",()=>{
@@ -94,4 +94,20 @@ describe("full",()=>{
         const result = isFull([4,4,4,4,2]);
         expect(result).toBe(false);
     });
+});
+
+describe("chance",()=>{
+    it("should return true for [1,1,2,3,4]",()=>{
+        const result = chance([4,4,4,2,2]);
+        expect(result).toBe(16);
+    });
+});
+
+describe("multithrowDices",()=>{
+    it("should return point for the best throw YAMS",()=>{
+        const result = multithrowDices([[4,4,4,2,2], [6,6,6,1,1], [2,2,2,2,5],[5,5,5,5,5],[1,2,2,3,3]]);
+        expect(result).toBe(50);
+    });
+    
+
 });
