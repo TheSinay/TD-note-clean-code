@@ -1,0 +1,22 @@
+{
+  "name": "td-note-clean-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitetest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheSinay/TD-note-clean-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheSinay/TD-note-clean-code/issues"
+  },
+  "homepage": "https://github.com/TheSinay/TD-note-clean-code#readme",
+  "dependencies": {
+    "vite": "^7.1.12"
+  }
+}
