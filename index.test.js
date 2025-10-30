@@ -79,3 +79,19 @@ describe("cheackDicesResult",()=>{
         expect(result).toBe(4); 
     });
 });
+
+
+describe("full",()=>{
+    it("should return true for [2,2,3,3,3]",()=>{
+        const result = isFull([2,2,3,3,3]);
+        expect(result).toBe(true);
+    });
+    it("should return false for [1,2,3,4,5]",()=>{
+        const result = isFull([1,2,3,4,5]);
+        expect(result).toBe(false);
+    });
+    it("should return false for [4,4,4,4,2]",()=>{
+        const result = isFull([4,4,4,4,2]);
+        expect(result).toBe(false);
+    });
+});
