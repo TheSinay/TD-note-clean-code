@@ -1,5 +1,5 @@
 
-const cheackDicesResult = (dices, repeat) => {
+export const cheackDicesResult = (dices, repeat) => {
     if (!Array.isArray(dices) || dices.length === 0 || repeat === 0) return false;
     
     dices.sort((a, b) => a - b);
@@ -43,6 +43,20 @@ export const isGrandeSuite = (dices) => {
     }
     return true;
 }
+
+export const isFull = (dices) => {
+  if (!Array.isArray(dices) || dices.length !== 5) return false;
+
+  //brelan
+  const threeKind = cheackDicesResult([...dices], 3);
+  if (!threeKind || threeKind === 0) return false;
+
+  //paire
+  const remaining = dices.filter(d => d !== threeKind);
+  const pair = cheackDicesResult(remaining, 2);
+
+  return !!pair && pair !== 0;
+};
 
 
 
