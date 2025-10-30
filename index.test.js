@@ -34,3 +34,26 @@ describe("iscarre",()=>{
         expect(result).toBe(false);
     });
 });
+
+
+describe("ispair",()=>{
+    it("should return true for [3,3,1,4,5]",()=>{
+        const result = isBrelan([3,3,1,4,5]);
+        expect(result).toBe(true);
+    });
+    it("should return false for [1,2,3,4,5]",()=>{
+        const result = isBrelan([1,2,3,4,5]);
+        expect(result).toBe(false);
+    });
+});
+
+describe("isYams",()=>{
+    it("should return true for [6,6,6,6,6]",()=>{
+        const result = isBrelan([6,6,6,6,6]);
+        expect(result).toBe(true);
+    });
+    it("should return false for [6,6,6,6,5]",()=>{
+        const result = isBrelan([6,6,6,6,5]);
+        expect(result).toBe(false);
+    });
+});
