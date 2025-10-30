@@ -1,5 +1,5 @@
 import { describe,it,expect } from "vitest";
-import { isBrelan, isCarre, isPair, isYams } from "./index.js";
+import { isBrelan, isCarre, isPair, isYams,isGrandeSuite } from "./index.js";
 
 describe("isBrelan",()=>{
     it("should return true for [2,2,2,4,5]",()=>{
@@ -55,5 +55,27 @@ describe("isYams",()=>{
     it("should return false for [6,6,6,6,5]",()=>{
         const result = isYams([6,6,6,6,5]);
         expect(result).toBe(false);
+    });
+});
+
+describe("grande suite" ,()=>{
+    it("should return true for [1,2,3,4,5] isBrelan",()=>{
+        const result = isGrandeSuite([1,2,3,4,5]);
+        expect(result).toBe(true);
+    });
+});
+
+describe("cheackDicesResult",()=>{
+    it("should return 2 for [2,2,2,4,5] and repeat 3",()=>{
+        const result = cheackDicesResult([2,2,2,4,5],3);
+        expect(result).toBe(2);
+    });
+    it("should return false for [1,2,3,4,5] and repeat 3",()=>{
+        const result = cheackDicesResult([1,2,3,4,5],3);
+        expect(result).toBe(false); 
+    });
+    it("should return 4 for [4,4,4,4,2] and repeat 4",()=>{
+        const result = cheackDicesResult([4,4,4,4,2],4);
+        expect(result).toBe(4); 
     });
 });
